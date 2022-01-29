@@ -12,6 +12,7 @@
 // include custom classes
 #include "src/simulatedaxis.h"
 #include "src/viewcontrolleraxis.h"
+//#include "src/rowelementviewcontroller.h"
 
 int main(int argc, char *argv[])
 {
@@ -46,7 +47,9 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextProperty("myGlobalObject", myGlobal); // the object will be available in QML with name "myGlobalObject"
     */
     // register a QML type made with C++
-    qmlRegisterType<SimulatedAxis>("com.PEB.SimulatedAxis", 1, 0, "SimulatedAxis"); // MyQMLType will be usable with: import com.yourcompany.xyz 1.0
+    qmlRegisterType<SimulatedAxis>("com.PEB.SimulatedAxis", 1, 0, "SimulatedAxis");
+    qmlRegisterType<ViewControllerAxis>("com.PEB.ViewControllerAxis", 1, 0, "ViewControllerAxis");
+    //qmlRegisterType<RowElementViewController>("com.PEB.RowElementViewController", 1, 0, "RowElementViewController");
 
     //engine.load(QUrl(felgo.mainQmlFileName()));
 

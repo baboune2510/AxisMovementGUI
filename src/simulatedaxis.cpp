@@ -42,6 +42,7 @@ void SimulatedAxis::setMinPos(float newMinPos)
         return;
     m_minPos = newMinPos;
     emit minPosChanged();
+    qDebug() << "minPosChanged";
 }
 
 float SimulatedAxis::maxPos() const
