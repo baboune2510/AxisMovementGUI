@@ -4,7 +4,7 @@
 #include <QQmlApplicationEngine>
 
 // uncomment this line to add the Live Client Module and use live reloading with your custom C++ code
-#include <FelgoLiveClient>
+//#include <FelgoLiveClient>
 
 // include qml context, required to add a context property
 #include <QQmlContext>
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
     // this is the preferred deployment option for publishing games to the app stores, because then your qml files and js files are protected
     // to avoid deployment of your qml files and images, also comment the DEPLOYMENTFOLDERS command in the .pro file
     // also see the .pro file for more details
-    //felgo.setMainQmlFileName(QStringLiteral("qrc:/qml/Main.qml"));
+    felgo.setMainQmlFileName(QStringLiteral("qrc:/qml/Main.qml"));
 
     // add global c++ object to the QML context as a property
     /*MyGlobalObject* myGlobal = new MyGlobalObject();
@@ -51,11 +51,11 @@ int main(int argc, char *argv[])
     qmlRegisterType<ViewControllerAxis>("com.PEB.ViewControllerAxis", 1, 0, "ViewControllerAxis");
     //qmlRegisterType<RowElementViewController>("com.PEB.RowElementViewController", 1, 0, "RowElementViewController");
 
-    //engine.load(QUrl(felgo.mainQmlFileName()));
+    engine.load(QUrl(felgo.mainQmlFileName()));
 
     // to start your project as Live Client, comment (remove) the lines "felgo.setMainQmlFileName ..." & "engine.load ...",
     // and uncomment the line below
-    FelgoLiveClient client (&engine);
+    //FelgoLiveClient client (&engine);
 
     return app.exec();
 }

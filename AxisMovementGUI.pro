@@ -3,7 +3,7 @@ CONFIG += felgo
 
 # uncomment this line to add the Live Client Module and use live reloading with your custom C++ code
 # for the remaining steps to build a custom Live Code Reload app see here: https://felgo.com/custom-code-reload-app/
-CONFIG += felgo-live
+# CONFIG += felgo-live
 
 # Project identifier and version
 # More information: https://felgo.com/doc/felgo-publishing/#project-configuration
@@ -18,7 +18,7 @@ PRODUCT_VERSION_CODE = 1
 PRODUCT_LICENSE_KEY = ""
 
 qmlFolder.source = qml
-DEPLOYMENTFOLDERS += qmlFolder # comment for publishing
+#DEPLOYMENTFOLDERS += qmlFolder # comment for publishing
 
 assetsFolder.source = assets
 DEPLOYMENTFOLDERS += assetsFolder
@@ -27,7 +27,7 @@ DEPLOYMENTFOLDERS += assetsFolder
 #axisUIFolder.source = qml/AxisUI
 #DEPLOYMENTFOLDERS += axisUIFolder # comment for publishing
 
-# RESOURCES += resources.qrc # uncomment for publishing
+RESOURCES += resources.qrc # uncomment for publishing
 
 # NOTE: for PUBLISHING, perform the following steps:
 # 1. comment the DEPLOYMENTFOLDERS += qmlFolder line above, to avoid shipping your qml files with the application (instead they get compiled to the app binary)

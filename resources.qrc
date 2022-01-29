@@ -1,5 +1,8 @@
 <RCC>
     <qresource prefix="/">
         <file>qml</file>
+        <file>qml/config.json</file>
+        <file>qml/EditableOptionsRowElement.qml</file>
+        <file>qml/Main.qml</file>
     </qresource>
 </RCC>
